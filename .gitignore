@@ -1,0 +1,12 @@
+# tài liệu của từng dự án — không đưa lên git
+specs/
+testcase/
+checklist/
+
+# bí mật / phiên đăng nhập
+.figma-token
+.claude/settings.local.json
+
+# file hệ thống
+.DS_Store
+__pycache__/
