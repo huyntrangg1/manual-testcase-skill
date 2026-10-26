@@ -33,7 +33,7 @@ Output:
 
 - Chỉ đọc/ghi trong đúng thư mục `<ten-du-an>`:
   - `specs/design|q&a/<ten-du-an>/`
-  - `testcase/<ten-du-an>/`
+  - `manual-tc/<ten-du-an>/`
 - Tên dự án khác trong ví dụ chỉ là ví dụ.
 - Đọc spec **nguyên văn**, không qua tóm tắt.
 - PRD begamob: đọc qua MCP `project_doc_get_by_url` (markdown); tài liệu dài thì theo `section` / `offset` tới hết.
@@ -193,7 +193,7 @@ Không ghi:
 
 **Chỉ hỏi user khi câu trả lời đổi:** flow · Expected · platform · data/state · scope · số / loại case — gồm cả đặc điểm app PRD không nói (nền tảng, tài khoản, gói, thiết bị đi kèm) và Project Name / Written By khi chưa có file test case cũ.
 
-- Tối đa 1 lượt, AskUserQuestion ≤ 4 câu, phương án đề xuất đặt đầu.
+- Hỏi hết các điểm cần hỏi, không giới hạn số câu: AskUserQuestion mỗi lượt ≤ 4 câu (giới hạn của tool) → gọi nhiều lượt liên tiếp tới khi hết. Phương án đề xuất đặt đầu.
 - Ghi kết quả thành câu Q&A: `Đã chốt (user, <ngày>): …`.
 - **Không hỏi được user** → giả định tạm, ghi Q&A, nêu trong báo cáo.
 - Case theo câu chốt / giả định ghi `(Q&A #n)` trong Expected.
@@ -307,7 +307,7 @@ build_testcase_xlsx(
     project_name=..., function_name=..., written_by=..., written_date=...,
     reviewed_by="", reviewed_date="", execute_by="", execute_date="",
     srs_link=..., testcases=..., rtm=...,
-    output_path="testcase/<ten-du-an>/<file>.xlsx",
+    output_path="manual-tc/<ten-du-an>/<file>.xlsx",
 )
 ```
 
@@ -319,7 +319,7 @@ build_testcase_xlsx(
 ## 9.2. Kiểm
 
 ```bash
-python3 .claude/skills/create-testcase-figma-prd-v2/assets/scripts/check_rtm.py testcase/<ten-du-an>/<file>.xlsx "specs/q&a/<ten-du-an>/<ten-spec>-qna.md"
+python3 .claude/skills/create-testcase-figma-prd-v2/assets/scripts/check_rtm.py manual-tc/<ten-du-an>/<file>.xlsx "specs/q&a/<ten-du-an>/<ten-spec>-qna.md"
 ```
 
 Phải đạt `✅ 0 lỗi`. Script kiểm:

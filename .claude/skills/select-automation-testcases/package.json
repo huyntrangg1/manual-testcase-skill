@@ -1,0 +1,9 @@
+{
+  "name": "select-automation-testcases",
+  "private": true,
+  "type": "module",
+  "description": "Chọn test case automation từ workbook manual kit v2",
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}

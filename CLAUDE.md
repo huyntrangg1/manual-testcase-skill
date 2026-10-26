@@ -2,6 +2,8 @@
 
 Sinh test case chức năng (integration / system test) có RTM truy vết cho app mobile (iOS + Android) từ PRD/spec + design Figma — skill `create-testcase-figma-prd-v2`. Điểm mờ / lệch giữa PRD và design ghi vào file Q&A.
 
+Chuyển test case manual đó sang test case automation (format v2) — skill `select-automation-testcases`.
+
 Dùng cho nhiều dự án con song song — mỗi loại tài liệu có thư mục con theo tên dự án `<ten-du-an>/`.
 
 # Cấu trúc thư mục
@@ -11,12 +13,13 @@ Dùng cho nhiều dự án con song song — mỗi loại tài liệu có thư m
 ├── CLAUDE.md
 ├── .mcp.json                  # Playwright + begamob (đọc PRD)
 ├── .figma-token               # Figma personal access token — tự tạo, KHÔNG commit
-├── .claude/skills/            # create-testcase-figma-prd-v2
+├── .claude/skills/            # create-testcase-figma-prd-v2 · select-automation-testcases
 ├── assets/
 │   ├── scripts/fetch_figma.py
 │   └── templates/testcase-template-v2.csv
 ├── specs/                     # (git ignore) design/<ten-du-an>/ cache Figma · q&a/<ten-du-an>/ file Q&A
-└── testcase/<ten-du-an>/      # (git ignore) test case XLSX (sheet test case + sheet RTM)
+├── manual-tc/<ten-du-an>/     # (git ignore) test case manual XLSX (sheet test case + sheet RTM)
+└── automation-tc/<ten-du-an>/ # (git ignore) test case automation XLSX (<sheet>-automation.xlsx)
 ```
 
 Quy ước:
