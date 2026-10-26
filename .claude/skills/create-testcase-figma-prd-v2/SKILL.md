@@ -256,7 +256,7 @@ Trạng thái mất thời gian (chờ giờ, sang ngày) → dựng nhanh bằn
 Chỉ 3 dạng:
 
 ### Dựng mới
-`1. Môi trường … 2. Reset nếu cần … 3. Data … 4. Màn bắt đầu …`
+`1. Reset nếu cần … 2. Data … 3. Màn bắt đầu …`
 
 ### Tiếp tục
 `Tiếp tục từ TC_xxx: <màn, data hiện tại>. Trước khi chạy: <thao tác>.`
@@ -276,7 +276,6 @@ Dùng cho focused case độc lập; chỉ ghi màn đích + data.
 - Gom case theo state: chỉ xem → đổi data → phá trạng thái cuối nhóm.
 - Không reuse nếu case trước đổi data mà case sau cần baseline khác.
 - Cấm câu mơ hồ ("trạng thái mặc định", "đã có data", "như case trước").
-- Môi trường chỉ ghi ở Dựng mới.
 
 ---
 
