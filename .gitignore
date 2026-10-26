@@ -1,6 +1,7 @@
 # tài liệu của từng dự án — không đưa lên git
 specs/
-testcase/
+manual-tc/
+automation-tc/
 checklist/
 
 # bí mật / phiên đăng nhập
@@ -10,3 +11,6 @@ checklist/
 # file hệ thống
 .DS_Store
 __pycache__/
+
+# thư viện cài bằng npm install
+node_modules/
